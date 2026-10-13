@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Tiempo</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <meta name="theme-color" content="#125d93">
+    <link rel="apple-touch-icon" href="icon-192.png">
+</head>
+
+<body>
+    <main>
+        <h1>El Tiempo</h1>
+        <h2>Saladillo</h2>
+
+        <p id="estado" role="status">Cargando...</p>
+        <p id="dia">Clima actual</p>
+        <h3 id="temperatura">-- °C</h3>
+        <p>Humedad: <span id="humedad">--</span> %</p>
+        <p>Viento: <span id="viento">--</span> km/h</p>
+        <p id="fecha"></p>
+
+        <button id="btnAyer" disabled>Ayer</button>
+        <button id="btnHoy" disabled>Hoy</button>
+        <button id="btnManana" disabled>Mañana</button>
+        <br>
+        <button id="btnActualizar">Actualizar</button>
+
+        <p id="estadoPwa" role="status">Preparando PWA...</p>
+        <p>Para instalar: buscá la opción en el menú del navegador.</p>
+        <hr>
+        <label for="foto">Tomar foto o elegir una imagen:</label>
+        <input id="foto" type="file" accept="image/*" capture="environment">
+        <img id="vistaFoto" alt="Foto del cielo" hidden>
+        <p>La foto no se sube ni se guarda al cerrar.</p>
+
+        <p>Hoy: dato actual. Ayer y mañana: datos de las 12:00.</p>
+        <p>Horario de Argentina. Son datos de un modelo meteorológico.</p>
+        <p>Fuente: <a href="https://open-meteo.com/">Open-Meteo</a>
+            (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>).</p>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
